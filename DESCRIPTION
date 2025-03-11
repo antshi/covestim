@@ -1,0 +1,15 @@
+Package: covestim
+Title: (High-dimensional) Covariance Estimation
+Version: 0.1.0
+Author: Antoniya Shivarova
+Maintainer: Antoniya Shivarova <an.shivarova@gmail.com>
+Description: Provides a large selection of functions for estimating (high-dimensional) 
+  covariance matrices according to most recent advances in the academic literature on portfolio theory and management.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 2.10)
+Imports: glasso, CVglasso, parallel, doParallel, foreach, Rdpack
+RdMacros: Rdpack
