@@ -26,8 +26,7 @@ where \eqn{\mu=\bar{x}_{j}=\frac{1}{n}\sum_{i=1}^{n}x_{ij}} (for \eqn{i=1,\ldots
 is the sample mean vector and \eqn{1} is an 1xp vector of ones.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_sample <- cov_estim_sample(sp_rets)[[1]]
+data(rets_m)
+sigma_sample <- cov_estim_sample(rets_m)[[1]]
 
 }

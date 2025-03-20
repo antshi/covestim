@@ -30,9 +30,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_tlasso <- cov_estim_tlasso(sp_rets, rho = 0.001)[[1]]
+#' data(rets_m)
+#' sigma_tlasso <- cov_estim_tlasso(rets_m, rho = 0.001)[[1]]
 #' }
 #'
 #' @import glasso

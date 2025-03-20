@@ -22,9 +22,8 @@
 #' the rest are substituted with their average as in \insertCite{bouchaudpotters2009;textual}{covestim}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_evc_mp <- cov_estim_evc_mp(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_evc_mp <- cov_estim_evc_mp(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references
@@ -83,9 +82,8 @@ cov_estim_evc_mp <- function(data) {
 #' and the remaining \eqn{s\times p} eigenvalues are substituted by their average.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_evc_bp <- cov_estim_evc_bp(sp_rets, cut_edge = 0.3)[[1]]
+#' data(rets_m)
+#' sigma_evc_bp <- cov_estim_evc_bp(rets_m, cut_edge = 0.3)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references

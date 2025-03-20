@@ -37,9 +37,8 @@ A corresponding MATLAB code for the estimator can be accessed under
 \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_lwident <- cov_estim_lwident(sp_rets)[[1]]
+data(rets_m)
+sigma_lwident <- cov_estim_lwident(rets_m)[[1]]
 
 }
 \references{

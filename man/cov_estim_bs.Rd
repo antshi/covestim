@@ -24,9 +24,8 @@ The Bayes-Stein estimator of the covariance matrix is computed according
 to \insertCite{jorion1986bayes;textual}{covestim}.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_bs <- cov_estim_bs(sp_rets)[[1]]
+data(rets_m)
+sigma_bs <- cov_estim_bs(rets_m)[[1]]
 
 }
 \references{

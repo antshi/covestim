@@ -26,9 +26,8 @@
 #' \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_lwnl <- cov_estim_lwnl(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_lwnl <- cov_estim_lwnl(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references

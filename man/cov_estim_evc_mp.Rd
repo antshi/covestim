@@ -34,9 +34,8 @@ In this eigenvalue clipping procedure the sample eigenvalues bigger that \eqn{\l
 the rest are substituted with their average as in \insertCite{bouchaudpotters2009;textual}{covestim}.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_evc_mp <- cov_estim_evc_mp(sp_rets)[[1]]
+data(rets_m)
+sigma_evc_mp <- cov_estim_evc_mp(rets_m)[[1]]
 
 }
 \references{

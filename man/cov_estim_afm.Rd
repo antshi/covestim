@@ -36,11 +36,10 @@ where \eqn{\hat{\Sigma}_F} is the sample covariance matrix of the common factors
 \eqn{\hat{\Sigma}_u} is the residuals covariance matrix, estimated with the user-sapplied estim_func.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
+data(rets_m)
 # using the Ledoit-Wolf nonlinear shrinkage estimator
-sigma_afm <- cov_estim_afm(sp_rets, resid_est_func = cov_estim_lwnl)[[1]]
+sigma_afm <- cov_estim_afm(rets_m, resid_est_func = cov_estim_lwnl)[[1]]
 # using the Ledoit-Wolf linear shrinkage estimator with shrinkage intensity 0.1
-sigma_afm <- cov_estim_afm(sp_rets, resid_est_func = cov_estim_lwone, shrink_int = 0.1)[[1]]
+sigma_afm <- cov_estim_afm(rets_m, resid_est_func = cov_estim_lwone, shrink_int = 0.1)[[1]]
 
 }

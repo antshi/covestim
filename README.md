@@ -29,7 +29,6 @@ Here is a short overview of the estimation methods:
 * PCA
 * POET
 * Ridge Regularization
-* Condition Number Regularization
 * Graphical Lasso Regularization
 * t-distributed Lasso Regularization
 
@@ -53,11 +52,8 @@ These are basic examples which show you how to use the wrapper function cov_esti
 library(covestim)
 
 # data
-data(sp200)
-str(sp200)
-
-# delete the date column, since the estimation functions expect a matrix.
-sp_rets <- as.matrix(sp200[,-1])
+data(rets_m)
+str(rets_m)
 ```
 
 ### Example 1
@@ -65,11 +61,11 @@ sp_rets <- as.matrix(sp200[,-1])
 Maximum-Likelihood Estimator
 
 ```r
-sigma_ml <- cov_estim_ml(sp_rets)[[1]]
+sigma_ml <- cov_estim_ml(rets_m)[[1]]
 
-sigma_ml <- cov_estim_wrapper(sp_rets, est_func = cov_estim_ml)
+sigma_ml <- cov_estim_wrapper(rets_m, est_func = cov_estim_ml)
 
-sigma_ml <- cov_estim_wrapper2(sp_rets, est_type = "ML")
+sigma_ml <- cov_estim_wrapper2(rets_m, est_type = "ML")
 
 ```
 
@@ -78,18 +74,18 @@ sigma_ml <- cov_estim_wrapper2(sp_rets, est_type = "ML")
 Linear Shrinkage towards the Constant Correlation Covariance Matrix
 
 ```r
-sigma_lwcc_results <- cov_estim_lwcc(sp_rets)
+sigma_lwcc_results <- cov_estim_lwcc(rets_m)
 sigma_lwcc <- sigma_lwcc_results[[1]]
 sigma_lwcc_param <- sigma_lwcc_results[[2]]
 
 # The argument res_all = FALSE (default) in the wrapper functions cov_estim_wrapper and cov_estim_wrapper2 returns only the covariance estimator.
-sigma_lwcc <- cov_estim_wrapper(sp_rets, cov_estim_lwcc, res_all = FALSE)
+sigma_lwcc <- cov_estim_wrapper(rets_m, cov_estim_lwcc, res_all = FALSE)
 ```
 
 You can also parse the user-defined tuning parameters such as shrinking intensity to the estimation function.
 
 ```r
-sigma_lwcc_results <- cov_estim_wrapper(sp_rets, cov_estim_lwcc, res_all = TRUE, shrink_int = 0.3)
+sigma_lwcc_results <- cov_estim_wrapper(rets_m, cov_estim_lwcc, res_all = TRUE, shrink_int = 0.3)
 str(sigma_lwcc_results)
 ```
 
@@ -98,7 +94,7 @@ str(sigma_lwcc_results)
 Some more complicated application would be the Approximate Factor Model with a nonlinear shrinkage estimation on the covariance matrix of residuals
 
 ```r
-sigma_afm_lwnl_results <- cov_estim_wrapper(sp_rets, est_func = cov_estim_afm, resid_est_func = cov_estim_lwnl)
+sigma_afm_lwnl_results <- cov_estim_wrapper(rets_m, est_func = cov_estim_afm, resid_est_func = cov_estim_lwnl)
 str(sigma_afm_lwnl_results)
 ```
 
@@ -110,5 +106,5 @@ For example, if you want to calculate different covariance estimators on the sam
 ```r
 # Maximum-Likelihood, Exact Factor Model, Ledoit-Wolf linear shrinkage and Approximate Factor Model with nonlinear shrinkage on the residuals:
 est_types <- c("ML", "EFM", "LW-IDENT", "LWNL-AFM") 
-sigma_list <- lapply(est_types, cov_estim_wrapper2, data = sp_rets)
+sigma_list <- lapply(est_types, cov_estim_wrapper2, data = rets_m)
 ```

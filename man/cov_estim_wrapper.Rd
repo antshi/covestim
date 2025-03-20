@@ -30,8 +30,7 @@ Estimates the covariance matrix of a dataset
 according to the user-defined function.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_ml <- cov_estim_wrapper(sp_rets, est_func = cov_estim_ml)[[1]]
+data(rets_m)
+sigma_ml <- cov_estim_wrapper(rets_m, est_func = cov_estim_ml)[[1]]
 
 }

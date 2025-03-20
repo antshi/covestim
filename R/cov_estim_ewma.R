@@ -17,9 +17,8 @@
 #' \eqn{\hat{\Sigma}_{t-1}} is the EWMA covariance estimator for the period \eqn{t-1}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_ewma <- cov_estim_ewma(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_ewma <- cov_estim_ewma(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references

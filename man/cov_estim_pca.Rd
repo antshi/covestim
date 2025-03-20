@@ -24,12 +24,11 @@ a list with the following entries
 Computes a Principal Component Analysis (PCA) estimator of the covariance matrix.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[1:100, -1]
+data(rets_m)
 # user-defined number of factors
-sigma_pca <- cov_estim_pca(sp_rets, number_pc = 2)[[1]]
+sigma_pca <- cov_estim_pca(rets_m, number_pc = 2)[[1]]
 # number of factors, defined with MP cut-edge
-results_pca_mp <- cov_estim_pca(sp_rets)
+results_pca_mp <- cov_estim_pca(rets_m)
 sigma_pca_mp <- results_pca_mp[[1]]
 number_pc <- results_pca_mp[[2]]
 

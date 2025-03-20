@@ -16,9 +16,8 @@
 #' and \eqn{j=1,\ldots,p}) is the sample mean vector and \eqn{1} is an 1xp vector of ones.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_ml <- cov_estim_ml(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_ml <- cov_estim_ml(rets_m)[[1]]
 #'
 #' @export cov_estim_ml
 #'

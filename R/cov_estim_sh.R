@@ -12,9 +12,8 @@
 #' \insertCite{haff1991variational;textual}{covestim}.
 #' Originally found under \insertCite{stcovpackage;textual}{covestim}.
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_sh <- cov_estim_sh(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_sh <- cov_estim_sh(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references

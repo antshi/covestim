@@ -41,12 +41,11 @@ according to \insertCite{fan2013poet;textual}{covestim}.
 The POET estimation is originally found under \insertCite{poetpackage;textual}{covestim}.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
+data(rets_m)
 # user-defined K
-sigma_poet <- cov_estim_poet(sp_rets, K = 2)[[1]]
+sigma_poet <- cov_estim_poet(rets_m, K = 2)[[1]]
 # optimal K
-sigma_poet <- cov_estim_poet(sp_rets)[[1]]
+sigma_poet <- cov_estim_poet(rets_m)[[1]]
 
 }
 \references{

@@ -32,8 +32,7 @@ where \eqn{\hat{\Sigma}_F} is the sample covariance matrix of the common factors
 \eqn{\hat{\Sigma}_u} is the covariaance matrix of residuals, assumed to have zero correlation.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_efm <- cov_estim_efm(sp_rets)[[1]]
+data(rets_m)
+sigma_efm <- cov_estim_efm(rets_m)[[1]]
 
 }

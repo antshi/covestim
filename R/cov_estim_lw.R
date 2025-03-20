@@ -24,9 +24,8 @@
 #' \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_lwident <- cov_estim_lwident(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_lwident <- cov_estim_lwident(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references
@@ -103,9 +102,8 @@ cov_estim_lwident <-
 #' \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_lwone <- cov_estim_lwone(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_lwone <- cov_estim_lwone(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references
@@ -181,9 +179,8 @@ cov_estim_lwone <-
 #' \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_lwcc <- cov_estim_lwcc(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_lwcc <- cov_estim_lwcc(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references
@@ -282,9 +279,8 @@ cov_estim_lwcc <-
 #' \url{https://www.econ.uzh.ch/en/people/faculty/wolf/publications.html}.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_lwcc_sf <- cov_estim_lwcc_sf(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_lwcc_sf <- cov_estim_lwcc_sf(rets_m)[[1]]
 #'
 #' @importFrom Rdpack reprompt
 #' @references

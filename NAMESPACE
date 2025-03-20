@@ -2,7 +2,6 @@
 
 export(cov_estim_afm)
 export(cov_estim_bs)
-export(cov_estim_condreg)
 export(cov_estim_efm)
 export(cov_estim_evc_bp)
 export(cov_estim_evc_mp)

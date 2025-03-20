@@ -19,9 +19,8 @@
 #' \eqn{\hat{\Sigma}_u} is the covariaance matrix of residuals, assumed to have zero correlation.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_efm <- cov_estim_efm(sp_rets)[[1]]
+#' data(rets_m)
+#' sigma_efm <- cov_estim_efm(rets_m)[[1]]
 #'
 #' @export cov_estim_efm
 #'
@@ -79,12 +78,11 @@ cov_estim_efm <- function(data,
 #' \eqn{\hat{\Sigma}_u} is the residuals covariance matrix, estimated with the user-sapplied estim_func.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
+#' data(rets_m)
 #' # using the Ledoit-Wolf nonlinear shrinkage estimator
-#' sigma_afm <- cov_estim_afm(sp_rets, resid_est_func = cov_estim_lwnl)[[1]]
+#' sigma_afm <- cov_estim_afm(rets_m, resid_est_func = cov_estim_lwnl)[[1]]
 #' # using the Ledoit-Wolf linear shrinkage estimator with shrinkage intensity 0.1
-#' sigma_afm <- cov_estim_afm(sp_rets, resid_est_func = cov_estim_lwone, shrink_int = 0.1)[[1]]
+#' sigma_afm <- cov_estim_afm(rets_m, resid_est_func = cov_estim_lwone, shrink_int = 0.1)[[1]]
 #'
 #' @export cov_estim_afm
 #'

@@ -28,12 +28,11 @@ Computes a specific estimator of the covariance matrix after preconditioning
 the data with a Single Factor (SF) model - the implicit market portfolio.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_lwnl_sf <- cov_estim_precond_sf(sp_rets,
+data(rets_m)
+sigma_lwnl_sf <- cov_estim_precond_sf(rets_m,
   precond_est_func = cov_estim_lwnl, bandwidth_speed = NULL
 )[[1]]
-sigma_glasso_sf <- cov_estim_precond_sf(sp_rets,
+sigma_glasso_sf <- cov_estim_precond_sf(rets_m,
   precond_est_func = cov_estim_glasso, rho = 0.01
 )[[1]]
 

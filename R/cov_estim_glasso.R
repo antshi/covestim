@@ -36,9 +36,8 @@
 #'
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_glasso <- cov_estim_glasso(sp_rets, type = "cov", rho = 0.0001)[[1]]
+#' data(rets_m)
+#' sigma_glasso <- cov_estim_glasso(rets_m, type = "cov", rho = 0.0001)[[1]]
 #'
 #' @import glasso CVglasso parallel doParallel foreach Rdpack
 #' @references

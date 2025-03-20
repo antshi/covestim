@@ -28,9 +28,8 @@ where V is the sample volatility matrix, I is a pxp identity matrix,
 C is the sample correlation matrix and \eqn{\rho} is the user-sapplied ridge penalty parameter.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_ridge <- cov_estim_ridge(sp_rets, rho = 0.01)[[1]]
+data(rets_m)
+sigma_ridge <- cov_estim_ridge(rets_m, rho = 0.01)[[1]]
 
 }
 \references{

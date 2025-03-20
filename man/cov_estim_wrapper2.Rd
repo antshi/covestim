@@ -42,9 +42,8 @@ Estimates the covariance matrix of a dataset
 according to the user-defined character string.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_ml <- cov_estim_wrapper2(sp_rets, "ML")[[1]]
-sigma_lwcc <- cov_estim_wrapper2(sp_rets, "LW-CC", param = 0.3, res_all = TRUE)[[1]]
+data(rets_m)
+sigma_ml <- cov_estim_wrapper2(rets_m, "ML")[[1]]
+sigma_lwcc <- cov_estim_wrapper2(rets_m, "LW-CC", param = 0.3, res_all = TRUE)[[1]]
 
 }

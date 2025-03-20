@@ -32,9 +32,8 @@ so that the \eqn{(1-s)\times p} largest eigenvalues are kept
 and the remaining \eqn{s\times p} eigenvalues are substituted by their average.
 }
 \examples{
-data(sp200)
-sp_rets <- sp200[, -1]
-sigma_evc_bp <- cov_estim_evc_bp(sp_rets, cut_edge = 0.3)[[1]]
+data(rets_m)
+sigma_evc_bp <- cov_estim_evc_bp(rets_m, cut_edge = 0.3)[[1]]
 
 }
 \references{

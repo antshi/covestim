@@ -38,9 +38,8 @@ sigma_sim <- function(p, corr_min, corr_max, vola_min, vola_max) {
 #' @return a logical, indicating whether the matrix is sparse (TRUE) or not (FALSE).
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sparsity_logic <- is_sparse(sp_rets)
+#' data(rets_m)
+#' sparse_check <- is_sparse(rets_m)
 #'
 #' @export is_sparse
 #'
@@ -62,12 +61,11 @@ is_sparse <- function(mat) {
 #' @return a logical. TRUE, if the matrix mat is positive-definite.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' ml_sigma <- cov_estim_wrapper2(sp_rets, "ML")
+#' data(rets_m)
+#' ml_sigma <- cov_estim_wrapper2(rets_m, "ML")
 #' is_posdef(ml_sigma)
 #'
-#' ml_sigma <- cov_estim_wrapper2(sp_rets[1:100, ], "ML")
+#' ml_sigma <- cov_estim_wrapper2(rets_m[1:100, ], "ML")
 #' is_posdef(ml_sigma)
 #'
 #' @export is_posdef
@@ -96,9 +94,8 @@ is_posdef <- function(mat, tol = 1e-8) {
 #' @return a positive-definite (to the tolerance of tol) matrix.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[1:100, -1]
-#' ml_sigma <- cov_estim_wrapper2(sp_rets, "ML")
+#' data(rets_m)
+#' ml_sigma <- cov_estim_wrapper2(rets_m, "ML")
 #' is_posdef(ml_sigma)
 #' ml_sigma_posdef <- make_posdef(ml_sigma)
 #' is_posdef(ml_sigma_posdef)
@@ -150,9 +147,8 @@ make_posdef <- function(mat, tol = 1e-8) {
 #' The near_posdef() is originally found under \insertCite{matrixpackage;textual}{covestim}.
 #' @examples
 #'
-#' data(sp200)
-#' sp_rets <- sp200[1:100, -1]
-#' ml_sigma <- cov_estim_wrapper2(sp_rets, "ML")
+#' data(rets_m)
+#' ml_sigma <- cov_estim_wrapper2(rets_m, "ML")
 #' ml_sigma_near_posdef <- near_posdef(ml_sigma, eig_tol = 1e-8)
 #'
 #' @importFrom Rdpack reprompt
@@ -279,9 +275,8 @@ near_posdef <-
 #' \eqn{\sqrt{\Lambda}} is a diagonal matrix with the squared roots of the eigenvalues of X.
 #'
 #' @examples
-#' data(sp200)
-#' sp_rets <- sp200[, -1]
-#' sigma_ml <- cov_estim_wrapper2(sp_rets, "ML")
+#' data(rets_m)
+#' sigma_ml <- cov_estim_wrapper2(rets_m, "ML")
 #' sigma_ml_sqrt_root <- sqrt_root_mat_calc(sigma_ml)
 #'
 #' @export sqrt_root_mat_calc
