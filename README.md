@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The package covestim includes various functions for estimating the covariance matrix of stock returns, especially in a high-dimensional setting. An examplary dataset of 200 monthly stock returns from the S&P 500 index is provided for testing purposes.
+The package covestim includes various functions for estimating the covariance matrix of stock returns, especially in a high-dimensional setting. An exemplary dataset of 200 monthly stock returns from the S&P 500 index is provided for testing purposes.
 
 Here is a short overview of the estimation methods:
 
